@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- JQuery Script -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
+
+    <title>Здесь вы можете оставить свою заявку!</title>
+</head>
+<body>
+<header>
+    <div class="container text-center">
+        <h1 class="title">Здесь вы можете оставить свою заявку!</h1>
+    </div>
+</header>
+<footer>
+    <div class="container">
+        <form action="/request" method="post">
+            <div class="form-group">
+                <label for="email">Ваш адрес электронной почты</label>
+                <input id="email" type="email" class="form-control" placeholder="name@example.com" data-error="Пожалуйста, введите ваш email!" name = "email">
+            </div>
+            <div class="form-group">
+                <label for="first_name">Имя</label>
+                <input id="first_name" type="text" class="form-control" placeholder="Данияр" data-error="Пожалуйста, введите ваше имя!" name = "first_name">
+            </div>
+            <div class="form-group">
+                <label for="last_name">Фамилия</label>
+                <input id="last_name" type="text" class="form-control" placeholder="Идрисов" data-error="Пожалуйста, введите вашу фамилию!" name = "last_name">
+            </div>
+            <div class="form-group">
+                <label for="request">Ваше сообщение</label>
+                <input id="request" type="text" class="form-control" placeholder="Добрый день! Хотел(а) бы узнать о..." data-error="Пожалуйста, введите текст завяки!" name = "request">
+            </div>
+            <input type="submit" value="Отправить" onclick="">
+        </form>
+    </div>
+    <div class="container text-center">
+        <form action="ThirdPage.html" target="_blank">
+            <button>Посмотреть все заявки</button>
+        </form>
+        <form class="action" action="FirstPage.html" target="_blank">
+            <button>Вернуться на главную страницу</button>
+        </form>
+    </div>
+</footer>
+</body>
+</html>

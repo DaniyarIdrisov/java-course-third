@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Buttons</title>
+	<link rel="stylesheet" href="css/main.css">
+
+	<script>
+		
+	function change(color) {
+		document.body.style.background = color.name;
+	}
+
+	function refresh() {
+		if (document.getElementById('1').name == 'black') {
+			document.getElementById('1').name = 'violet';
+			document.getElementById('2').name = 'black';
+			document.getElementById('3').name = 'red';
+		}
+		else {
+			if (document.getElementById('1').name == 'violet') {
+				document.getElementById('1').name = 'red';
+				document.getElementById('2').name = 'violet';
+				document.getElementById('3').name = 'black';
+			}
+			else {
+				document.getElementById('1').name = 'black';
+				document.getElementById('2').name = 'red';
+				document.getElementById('3').name = 'violet';
+			}
+		}
+	}
+
+	function def() {
+		document.body.style.background = 'white';
+		document.getElementById('1').name = 'black';
+		document.getElementById('2').name = 'red';
+		document.getElementById('3').name = 'violet';
+	}
+
+	</script>
+	
+</head>
+<body>
+		<form class="button">
+			<input id="1" type="button" value="1" name="black" onclick='change(this)'>
+		</form>
+		<form class="button">
+			<input id="2" type="button" value="2" name="red" onclick='change(this)'>
+		</form>
+		<form class="button">
+			<input id="3" type="button" value="3" name="violet" onclick='change(this)'>
+		</form>
+		<form class="button">
+			<input type="button" value="change buttons" onclick='refresh()'>
+		</form>
+		<form class="button">
+			<input type="button" value="default" onclick='def()'>
+		</form>
+</body>
+</html>

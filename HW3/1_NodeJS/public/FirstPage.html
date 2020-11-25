@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- JQuery Script -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
+    <script>
+        function getResume() {
+            $.getJSON("/resume", function (response) {
+                let html = "<h1> Привет! Меня зовут " + response["first_name"] + " " + response["last_name"] + ". Мне " + response["age"] + " лет и я программист!</h1>";
+                $("#header").append(html);
+                html = "<p> " + response["education"] + "</p>";
+                $("#education").append(html);
+                html = "<p> " + response["hobbies"] + "</p>";
+                $("#hobbies").append(html);
+                html = "<p> " + response["profession"] + "</p>";
+                $("#profession").append(html);
+            });
+        }
+    </script>
+
+    <title>Привет! Меня зовут Данияр. На этом сайте я немного расскажу о себе:)</title>
+</head>
+<body onload="getResume()">
+<div class="container text-center">
+    <h1 class= "title" id="header"></h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <h2>Мои учебные заведения</h2>
+            <p id="education"></p>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <h2>Мои увлечения</h2>
+            <p id="hobbies"></p>
+        </div>
+    </div>
+</div>
+<div class="container text-center">
+    <h2>
+        Мои профессиональные навыки
+    </h2>
+    <p id="profession"></p>
+</div>
+<div class="container text-center">
+    <form action="SecondPage.html" target="_blank">
+        <button>Чтобы оставить мне заявку перейдите по этой ссылке</button>
+    </form>
+    <form class="action" action="ThirdPage.html" target="_blank">
+        <button>Посмотреть все заявки</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+body {
+	color: #fff;
+	background:url(../images/background.jpg) no-repeat center top / cover;
+	width: 100%;
+}
+
+.title {
+	margin-top: 60px;
+}
+
+.action {
+	margin-top: 10px;
+}
